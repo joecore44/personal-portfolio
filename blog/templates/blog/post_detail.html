@@ -1,0 +1,42 @@
+
+<div id="de_modal-content" class="container">
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <img src="{{ object.post_image.url }}" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-lg-4 de_project-info">
+            <h3>{{ object.title }}</h3>
+            <p>{{ object.content | safe }}</p>
+           
+            <div class="de_project-details">
+                {% if object.client %}
+                <div class="d-field">
+                    <i class="fa fa-user-o"></i>Client: <span>{{ object.client }}</span>
+                </div>
+                {% endif %}
+                {% if object.type %}
+                <div class="d-field">
+                    <i class="fa fa-file-text-o"></i>Type: <span>{{ object.type }}</span>
+                </div>
+                {% endif %}
+                {% if object.github_link %}
+                <div class="d-field">
+                    <i class="fa fa-github"></i>Github: <span><a href="{{ object.github_link }}" target="_blank">{{ object.github_link|slice:"8:" }}</a></span>
+                </div>
+                {% endif %}
+                {% if object.project_link %}
+                <div class="d-field">
+                    <i class="fa fa-external-link"></i>Preview: <span><a href="{{ object.project_link }}" target="_blank">{{ object.project_link|slice:"8:" }}</a></span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="spacer-30"></div>
+            <blockquote>
+                "Very well done theme. Versatile, extremely well coded, and gorgeous. That's a great combo. Highly recommended."
+                <span>John Archi</span>
+            </blockquote>
+            
+        </div>
+    </div>
+</div>
