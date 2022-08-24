@@ -120,13 +120,16 @@ STATICFILES_DIRS = [
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_QUERYSTRING_AUTH = False
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIA_ROOT = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT = 'media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILS_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     )
@@ -135,3 +138,6 @@ STATICFILS_DIRS = (
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
