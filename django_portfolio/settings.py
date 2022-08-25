@@ -19,7 +19,14 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['jms-portfolio.herokuapp.com']
+ALLOWED_HOSTS = ['jms-portfolio.herokuapp.com', '127.0.0.1']
+
+# pip install django-heroku
+# import django_heroku
+# add to bottom of settings django_heroku.settings(locals())
+# pip freeze > requirements.txt
+# heroku run python manage.py migrate
+
 
 
 # Application definition
