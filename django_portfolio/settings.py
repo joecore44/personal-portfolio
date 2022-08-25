@@ -128,6 +128,7 @@ AWS_QUERYSTRING_AUTH = False
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = 'static/'
 #MEDIA_ROOT = 'media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
